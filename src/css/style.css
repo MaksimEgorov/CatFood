@@ -37,32 +37,33 @@ h1 {
     cursor: pointer;
     text-align: left;
     overflow: hidden;
-    
+
     margin: 40px;
     margin-top: 4px;
 }
 
 
 .cats input {
-   display: none;
+    display: none;
 }
 
-input:checked + .food{
+input:checked+.food {
     border-color: #d91667;
 }
-.food:hover {
-        border-color: #2EA8E6;
-    }
 
-input:checked .cats{
-     border-color: #D91667;
-    }
+.food:hover {
+    border-color: #2EA8E6;
+}
+
+input:checked .cats {
+    border-color: #D91667;
+}
 
 .food-introduction {
     text-align: center;
     color: #898989;
     margin-left: -20px;
-}    
+}
 
 .food-name__wrapper {
     margin: 0;
@@ -80,6 +81,7 @@ input:checked .cats{
     font-size: 48px;
     font-weight: bold;
 }
+
 .food-components {
     margin: 0;
     font-size: 24px;
@@ -97,35 +99,33 @@ input:checked .cats{
     background-color: #1698d9;
     border-radius: 50%;
     position: absolute;
-    bottom:15px;
-    right:15px;
+    bottom: 15px;
+    right: 15px;
     text-align: center;
     font-size: 32px;
     color: #ffffff;
 }
 
-.food:hover 
-
-
+.food:hover .food-weight {
+    background-color: #2EA8E6;
+}
 
 .cat-photo {
     content: url(/src/img/Photo_Cat.png);
     position: relative;
     margin-left: -27px;
     margin-top: 16px;
-    
 }
 
 .food-weight--amount {
-    margin:0;
+    margin: 0;
     padding: 0;
     margin-top: 5px;
     font-size: 42px;
-    letter-spacing: 2px;
 }
 
 .food-weight--gramms {
-    margin:0;
+    margin: 0;
     padding: 0;
     font-size: 24px;
 }
