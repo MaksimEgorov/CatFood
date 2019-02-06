@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Exo2.0-Thin';
     font-style: normal;
-    src: url(/fonts/Exo2.0-Thin.otf) format('opentype');
+    src: url(../fonts/Exo2.0-Thin.otf) format('opentype');
 }
 
 body {
     display: flex;
-    background-image: url(/src/img/Pattern.png);
+    background-image: url(../img/Pattern.png);
     text-align: center;
     padding: 20px;
     margin: 0;
@@ -111,7 +111,7 @@ input:checked .cats {
 }
 
 .cat-photo {
-    content: url(/src/img/Photo_Cat.png);
+    content: url(../img/Photo_Cat.png);
     position: relative;
     margin-left: -27px;
     margin-top: 16px;

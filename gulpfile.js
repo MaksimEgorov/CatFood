@@ -19,6 +19,24 @@ const jsFiles = [
     //'./src/js/some.js'
 ];
 
+const imgFiles = [
+    './src/img/*'
+];
+
+const fontsFiles = [
+    './src/fonts/*'
+];
+
+function fonts(){
+    return gulp.src(fontsFiles)
+        .pipe(gulp.dest('./build/fonts'));
+}
+
+function images(){
+    return gulp.src(imgFiles)
+        .pipe(gulp.dest('./build/img'));
+}
+
 function styles(){
     return gulp.src(cssFiles)
         .pipe(concat('all.css'))
@@ -57,9 +75,11 @@ function clean(){
 gulp.task('styles', styles);
 gulp.task('script', script);
 gulp.task('watch', watch);
+gulp.task('images', images);
+gulp.task('fonts', fonts);
 
 gulp.task ('build', gulp.series(clean, 
-                    gulp.parallel(styles,script)
+                    gulp.parallel(styles,script,images,fonts)
                     ));
 
 gulp.task ('dev', gulp.series('build', 'watch'))                    
