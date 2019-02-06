@@ -47,7 +47,6 @@ h1 {
    display: none;
 }
 
-
 input:checked + .food{
     border-color: #d91667;
 }
