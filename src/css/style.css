@@ -1,11 +1,11 @@
-
 @font-face {
     font-family: 'Exo2.0-Thin';
     font-style: normal;
     src: url(../fonts/Exo2.0-Thin.otf) format('opentype');
 }
 
-body, html {
+body,
+html {
     height: 100%;
     background: url(../img/Pattern.png);
 }
@@ -33,35 +33,83 @@ h1 {
     font-weight: 400;
 }
 
+.cats {
+    display: relative;
+    width: 320px;
+    height: 480px;
+    margin: 40px;
+}
+
 .food {
     position: relative;
+    z-index: 10;
     width: 312px;
-    height: 470px;
+    height: 440px;
     background-color: #f2f2f2;
     border: solid #1698d9 4px;
     border-radius: 10px;
     cursor: pointer;
     text-align: left;
-    overflow: hidden;
-
-    margin: 40px;
-    margin-top: 4px;
+    border-top: none;
+    background-image: url(../img/Photo_Cat.png);
+    background-repeat: no-repeat;
+    background-position-x: -30px;
+    background-position-y: 180px;
 }
 
+.food::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 60px;
+    left: 4px;
+    top: -2px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 7px;
+    border-top-left-radius: 12px;
+    border-left: 5px solid #1698d9;
+    transform: translate(7px, -30px) rotate(45deg);
+    background: #f2f2f2;
+
+}
+
+.food::after {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    height: 45px;
+    background: #f2f2f2;
+    position: absolute;
+    width: 285px;
+    left: 31px;
+    top: -33px;
+    border: 4px solid #1698d9;
+    border-bottom: none;
+    border-top-right-radius:10px;
+    border-top-left-radius: 10px;
+    padding-top: 19px;
+    padding-right: 51px;
+}
 
 .cats input {
     display: none;
 }
 
-input:checked+.food {
+input:checked +.food,
+input:checked +.food::after,
+input:checked +.food::before{
     border-color: #d91667;
 }
 
-.food:hover {
+
+.food:hover,
+.food:hover:before,
+.food:hover:after{
     border-color: #2EA8E6;
 }
 
-input:checked .cats {
+input:checked .cats{
     border-color: #D91667;
 }
 
@@ -114,13 +162,6 @@ input:checked .cats {
 
 .food:hover .food-weight {
     background-color: #2EA8E6;
-}
-
-.cat-photo {
-    content: url(../img/Photo_Cat.png);
-    position: relative;
-    margin-left: -27px;
-    margin-top: 16px;
 }
 
 .food-weight--amount {
