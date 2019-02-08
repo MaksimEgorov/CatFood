@@ -7,7 +7,7 @@
 body,
 html {
     height: 100%;
-    background: url(../img/Pattern.png);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(../img/Pattern.png);
 }
 
 .body-wrapper {
@@ -186,4 +186,33 @@ input:checked .cats{
     height: fit-content;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.cats-footer {
+    color: #f2f2f2;
+    font-family: inherit;
+    font-size: 13px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.cats-footer--buy {
+    color: #138ac6;
+    border-bottom: 1px dashed;   
+}
+
+.cats-footer span {
+    color: #138ac6;
+}
+
+.cats-footer--hidden {
+    color: #f2f2f2;
+    font-family: inherit;
+    font-size: 13px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
