@@ -121,6 +121,15 @@ input:checked .cats {
     margin-left: -20px;
 }
 
+.food-introduction--hidden{
+    position: relative;
+    top: -10px;
+    z-index: 3;
+    text-align: left;
+    color: #e62e7a;
+    margin-left: 45px;
+}
+
 .food-name__wrapper {
     margin: 0;
     display: flex;
